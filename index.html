@@ -11,6 +11,10 @@
             padding:20px;
             height: 600px;
         }
+
+        #app-container {
+            display: flex;
+        }
         button{
             width: 100px;
             height: 30px;
@@ -66,7 +70,7 @@
     <source src = "bgvideo.mp4"
             type = "video/mp4">
 </video>
-
+<div id="app-container">
 <canvas id="canvas"  >
 <!--    <div class="insert" >-->
 <!--        <ion-icon name="cloud-upload-outline" class="upload-box" ></ion-icon>-->
@@ -90,6 +94,7 @@
         <button id="rotate-btn">Rotate</button>
         <button id="save-btn">Save</button>
 
+</div>
 </div>
 <script src="tools.js"></script>
 <!--<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>-->
