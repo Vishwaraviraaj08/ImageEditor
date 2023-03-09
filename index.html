@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ImageEditor</title>
+    <style>
+        #controls{
+            position : relative;
+            /*top : 0;*/
+            /*right:0;*/
+            padding:20px;
+            height: 600px;
+        }
+        button{
+            width: 100px;
+            height: 30px;
+            /*padding: 20px;*/
+            background: #262C2CB7;
+            align-content:center;
+            border-radius: 10px;
+            text-align:center;
+            justify-content: space-between;
+            color: white;
+            font-size:14px;
+            border: None;
+        }
+        button:hover{
+            background: #344141B7;
+        }
+        canvas {
+            border: 1px solid #ccc;
+            display: block;
+            /*margin: 0 0px;*/
+            /*background: aqua;*/
+            position: relative;
+            height: 650px;
+            width: 900px
+        }
+
+        #controls {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #file-input {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        button {
+            margin: 5px;
+        }
+        #bgvideo {
+            position: fixed;
+            z-index : -1;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+<video autoplay muted loop id = "bgvideo">
+    <source src = "bgvideo.mp4"
+            type = "video/mp4">
+</video>
+
+<canvas id="canvas"  >
+<!--    <div class="insert" >-->
+<!--        <ion-icon name="cloud-upload-outline" class="upload-box" ></ion-icon>-->
+<!--    </div>-->
+</canvas>
+<input type="file" id="file-input" />
+
+
+
+<div id="controls">
+
+        <button id="crop-btn">Crop</button>
+        <button id="reset-btn">Reset</button>
+        <div id = "Filters">
+            <button id="contrast-btn">Contrast</button>
+            <button id="grayscale-btn">Grayscale</button>
+            <button id="sepia-btn">Sepia</button>
+            <button id="negative-btn">Negative</button>
+        </div>
+
+        <button id="rotate-btn">Rotate</button>
+        <button id="save-btn">Save</button>
+
+</div>
+<script src="tools.js"></script>
+<!--<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>-->
+<!--<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>-->
+</body>
+
+</html>
